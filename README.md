@@ -29,6 +29,7 @@ It helps users understand trends, performance, and financial health without need
 ---
 
 ## 📂 Folder Structure
+
 financeai/
 │
 ├── app/                         # Next.js App Router
@@ -92,5 +93,6 @@ financeai/
 ├── next.config.js
 ├── package.json
 └── README.md
+
 
 
