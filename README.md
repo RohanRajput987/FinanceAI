@@ -2,18 +2,29 @@
 
 FinanceAI is an AI-powered financial chart and PDF analysis platform designed to simplify complex financial data through clear visualizations and natural language explanations.
 
-It helps users understand trends, performance, and financial health without needing deep finance expertise.
+It helps users understand trends, performance, and overall financial health without requiring deep finance expertise, while still offering analyst-level insights.
+
+---
+
+## 🚀 Overview
+
+FinanceAI allows users to upload financial PDF documents and converts raw financial data into:
+- Interactive charts
+- Key financial metrics
+- AI-generated explanations and insights
+
+The platform is suitable for beginners, students, analysts, and anyone looking to understand financial statements visually.
 
 ---
 
 ## ✨ Key Features
 
-- 📄 Upload and analyze financial PDFs
-- 📊 Interactive charts for financial data
-- 🧠 AI-generated explanations for charts and metrics
-- 📈 Trend detection and insights
-- 🎓 Beginner-friendly and analyst-level explanations
-- ⚡ Built using Next.js App Router
+- 📄 Upload and analyze financial PDFs  
+- 📊 Interactive financial charts  
+- 🧠 AI-generated explanations for metrics and trends  
+- 📈 Trend detection and financial insights  
+- 🎓 Beginner-friendly with analyst-level depth  
+- ⚡ Built using Next.js 14 App Router  
 
 ---
 
@@ -30,6 +41,7 @@ It helps users understand trends, performance, and financial health without need
 
 ## 📂 Folder Structure
 
+```text
 financeai/
 │
 ├── app/                         # Next.js App Router
@@ -62,7 +74,7 @@ financeai/
 │   │   ├── ProfitChart.tsx
 │   │   └── CashFlowChart.tsx
 │   │
-│   ├── ui/                      # Buttons, cards, modals
+│   ├── ui/                      # Buttons, cards, loaders
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
 │   │   └── Loader.tsx
@@ -93,6 +105,4 @@ financeai/
 ├── next.config.js
 ├── package.json
 └── README.md
-
-
 
