@@ -29,4 +29,68 @@ It helps users understand trends, performance, and financial health without need
 ---
 
 ## 📂 Folder Structure
+financeai/
+│
+├── app/                         # Next.js App Router
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Landing page
+│   ├── globals.css              # Global styles
+│   │
+│   ├── dashboard/               # User dashboard
+│   │   ├── page.tsx
+│   │   ├── loading.tsx
+│   │   └── error.tsx
+│   │
+│   ├── upload/                  # PDF upload & processing
+│   │   └── page.tsx
+│   │
+│   ├── analysis/                # Charts & AI insights
+│   │   └── page.tsx
+│   │
+│   └── api/                     # API routes
+│       ├── analyze-pdf/
+│       │   └── route.ts         # PDF analysis endpoint
+│       ├── generate-insights/
+│       │   └── route.ts         # AI explanations
+│       └── extract-data/
+│           └── route.ts         # Financial data extraction
+│
+├── components/                  # Reusable UI components
+│   ├── charts/
+│   │   ├── RevenueChart.tsx
+│   │   ├── ProfitChart.tsx
+│   │   └── CashFlowChart.tsx
+│   │
+│   ├── ui/                      # Buttons, cards, modals
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   └── Loader.tsx
+│   │
+│   └── FileUpload.tsx
+│
+├── lib/                         # Core logic & helpers
+│   ├── pdf-parser.ts            # PDF parsing logic
+│   ├── ai-analyzer.ts           # AI prompt & response logic
+│   ├── financial-metrics.ts     # KPI calculations
+│   └── chart-transform.ts       # Data → chart format
+│
+├── hooks/                       # Custom React hooks
+│   ├── usePDFUpload.ts
+│   └── useFinancialAnalysis.ts
+│
+├── types/                       # TypeScript types
+│   ├── financial.ts
+│   ├── chart.ts
+│   └── api.ts
+│
+├── public/                      # Static assets
+│   └── images/
+│
+├── .env.example                 # Environment variables
+├── tailwind.config.ts
+├── tsconfig.json
+├── next.config.js
+├── package.json
+└── README.md
+
 
