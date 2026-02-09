@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
@@ -19,32 +19,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
 
+      # 3️⃣ Setup pnpm (THIS FIXES YOUR ERROR)
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 9
+          run_install: false
 
+      # 4️⃣ Verify pnpm is available
+      - name: Verify pnpm
+        run: pnpm --version
+
+      # 5️⃣ Install dependencies
       - name: Install dependencies
         run: pnpm install
 
+      # 6️⃣ Configure GitHub Pages for Next.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
-      - name: Build Next.js (static export)
+      # 7️⃣ Build Next.js (static export)
+      - name: Build Next.js
         run: pnpm build
 
-      - name: Upload artifact
+      # 8️⃣ Upload static site artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
@@ -57,6 +68,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
